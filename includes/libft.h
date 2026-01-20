@@ -6,7 +6,7 @@
 /*   By: ewaltz <ewaltz@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 10:05:12 by ewaltz            #+#    #+#             */
-/*   Updated: 2026/01/20 14:53:10 by ewaltz           ###   ########.fr       */
+/*   Updated: 2026/01/20 15:26:05 by ewaltz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 int ft_atoi(const char *nptr);
 void *ft_calloc(size_t nmemb, size_t size);
-char *ft_strdup(const char *s);
+char *ft_strdup(const char *s, size_t len);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
 char *ft_strtrim(char const *s1, char const *set);
@@ -58,5 +58,25 @@ void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 int ft_printf(const char *str, ...);
+int ft_router(const char spec, va_list *args);
+int ft_printf_char(va_list *args);
+int ft_printf_string(va_list *args);
+int ft_printf_ptr(va_list *args);
+int ft_printf_int(va_list *args);
+int ft_printf_unsigned(va_list *args);
+int ft_printf_hexa_low(va_list *args);
+int ft_printf_hexa_up(va_list *args);
+int ft_putnbr_base(unsigned long nbr);
+int ft_putnbr_base_low(unsigned long nbr);
+int ft_putnbr_base_up(unsigned long nbr);
+void ft_putnbr(int n);
+void ft_putnbr_unsigned(unsigned int n);
+long ft_int_len(long nbr);
+int ft_int_len_unsigned(unsigned int nbr);
 char *get_next_line(int fd);
+char *read_buffer(char *rest, int bytes, char *buffer, int fd);
+char *check_params(int fd);
+int get_index(char *str);
+char *get_rest(char *str, int start);
+char *str_join(char *rest, char *buffer);
 #endif

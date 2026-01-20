@@ -1,20 +1,13 @@
 /* ************************************************************************** */
-/*																			  */
-/*														  :::
- * ::::::::   */
-/*	 get_next_line_utils.c
- * :+:		 :+:	:+:   */
-/*													  +:+
- * +:+		  +:+	  */
-/*	 By: ewaltz <ewaltz@student.42.fr>				+#+  +:+
- * +#+		  */
-/*												  +#+#+#+#+#+
- * +#+			  */
-/*	 Created: 2025/12/05 14:14:58 by ewaltz			   #+#	  #+#
- */
-/*	 Updated: 2025/12/11 15:32:05 by ewaltz			  ###
- * ########.fr		  */
-/*																			  */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ewaltz <ewaltz@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/20 15:32:41 by ewaltz            #+#    #+#             */
+/*   Updated: 2026/01/20 15:32:44 by ewaltz           ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
@@ -31,35 +24,6 @@ int get_index(char *str) {
     i++;
   }
   return (-1);
-}
-
-char *ft_strdup(char *str, int len) {
-  int i;
-  char *new_str;
-
-  i = 0;
-  if (!str || len > ft_strlen(str) || len < 0)
-    return (NULL);
-  new_str = malloc(sizeof(char) * (len + 1));
-  if (!new_str)
-    return (NULL);
-  while (i < len) {
-    new_str[i] = str[i];
-    i++;
-  }
-  new_str[i] = '\0';
-  return (new_str);
-}
-
-int ft_strlen(char *str) {
-  int i;
-
-  i = 0;
-  if (!str)
-    return (0);
-  while (str[i])
-    i++;
-  return (i);
 }
 
 char *get_rest(char *str, int start) {
