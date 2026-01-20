@@ -101,20 +101,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (fill_tab(tab, s, c));
 }
-
-// int		main(void)
-// {
-// 	char	**test;
-// 	int		i;
-
-// 	i = 0;
-// 	printf(" %d", ft_word_count("ok cecie est un test", ' '));
-// 	test = ft_split("ok cecie est un test", ' ');
-// 	// while (test[i])
-// 	// {
-// 	// 	printf("%s\n", test[i]);
-// 	// 	i++;
-// 	// }
-// 	// ft_free_all(test);
-
-// }
